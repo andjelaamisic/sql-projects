@@ -2,9 +2,9 @@
 -- Goal: Analyze cumulative sales and average price trends over time.
 --
 -- This query calculates:
---   • Monthly total sales and average product price
---   • Running (cumulative) total of sales within each year using window functions
---   • Cumulative sum of average prices across months to observe long-term pricing trends
+--   â€¢ Monthly total sales and average product price
+--   â€¢ Running (cumulative) total of sales within each year using window functions
+--   â€¢ Cumulative sum of average prices across months to observe long-term pricing trends
 --
 -- Purpose: To identify how total sales and average product prices evolve cumulatively
 -- over time and to detect general growth or decline patterns.
