@@ -4,7 +4,7 @@
 -- This query calculates:
 --   • Monthly total sales and average product price
 --   • Running (cumulative) total of sales within each year using window functions
---   • Cumulative sum of average prices across months to observe long-term pricing trends
+--   • Moving average of prices by month (to smooth short-term price fluctuations).
 --
 -- Purpose: To identify how total sales and average product prices evolve cumulatively
 -- over time and to detect general growth or decline patterns.
@@ -18,7 +18,7 @@ select
 month,
 total_sales,
 sum(total_sales) over (partition by year(month) order by month) running_total,
-sum(avg_price) over (order by month) cumulative_average_price
+avg(avg_price) over (order by month) moving_avg_price
 from
 (select
 datetrunc(month,order_date) as month,
@@ -28,3 +28,4 @@ from [gold.fact_sales]
 where order_date is not null
 group by datetrunc(month,order_date)
 )t
+
