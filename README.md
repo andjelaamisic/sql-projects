@@ -20,6 +20,7 @@ The goal of these projects is to extract insights from sales and product data, t
 | `06_part_to_whole_analysis.sql` | Determines each product category's contribution to total sales (part-to-whole analysis). |
 | `07_data_segmentation.sql` | Segments products into cost-based groups and counts how many products fall into each range. |
 | `08_product_performance_report.sql` | Comprehensive product report combining key metrics, performance segmentation, and KPIs like recency, average order revenue, and monthly revenue. |
+| `09_report_customers.sql` | Analyzes customer behavior and key KPIs, including total orders, lifetime value, recency, and spending segmentation by age group and customer category (VIP, Regular, New). |
 
 ---
 
